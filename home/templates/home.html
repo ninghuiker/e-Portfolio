@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="col-md-8 offset-md-2">
+    <br>
+    <h1>MY PORTFOLIO</h1>
+    <hr>
+    <br>
+    <br>
+    <h4>About Me:</h4>
+    <p>
+        Welcome to my portfolio. Studying in the course of Information Technology, I have always been passionate in anything that is computer related. I have currently set my sights on attaining more knowledge about Information Security and Hacking and also Video Game A.I. I thrive to put to good use the skills that I had and will learn these 3 years to better the lifestyles of people. Explore more information about me below and contact me directly to learn more.
+    </p>
+    <br>
+    <br>
+    <h4>My Resume:</h4> 
+    <img src="{% static 'images/Resume1.png' %}" alt="Resume Page 1" width="600" height="1000"/>
+    <br>
+    <img src="{% static 'images/Resume2.png' %}" alt="Resume Page 2" width="600" height="1000"/>
+</div>
+{% endblock %}
