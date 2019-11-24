@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+<head>
+    <title>Projects</title>
+</head>
 <h1>Projects</h1>
 <div class="row">
 {% for project in projects %}
@@ -11,7 +14,7 @@
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
                 <a href="{% url 'project_detail' project.pk %}"
-                   class="btn btn-primary">
+                   class="btn btn-primary" name="readMore">
                     Read More
                 </a>
             </div>

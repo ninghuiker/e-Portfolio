@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block page_content %}
+<head>
+    <title>{{ post.title }}</title>
+</head>
 <div class="col-md-8 offset-md-2">
     <h1>{{ post.title }}</h1>
     <small>
@@ -21,15 +24,15 @@
         <div class="form-group">
             {{ form.body }}
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" name="submitBtn">Submit</button>
     </form>
     <h3>Comments:</h3>
     {% for comment in comments %}
     <p>
         On {{comment.created_on.date }}&nbsp;
-        <b>{{ comment.author }}</b> wrote:
+        <b name="authorComment">{{ comment.author }}</b> wrote:
     </p>
-    <p>{{ comment.body }}</p>
+    <p name="bodyComment">{{ comment.body }}</p>
     <hr>
     {% endfor %}
 </div>

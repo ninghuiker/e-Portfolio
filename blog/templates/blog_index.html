@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+<head>
+    <title>Blog</title>
+</head>
 <div class="col-md-8 offset-md-2">
     <h1>Blog</h1>
     <hr>
@@ -8,7 +11,7 @@
     <h3>Projects</h3>
     <hr>
     <a href="{% url 'project_index' %}"
-    class="btn btn-primary">
+    class="btn btn-primary" name="projectBtn">
      Click here to view my projects!
     </a>
     
